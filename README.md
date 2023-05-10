@@ -1,4 +1,4 @@
-# Stargazer.Abp.Modules
+# 基于ABP的功能模块列表说明
 
 ## 用户模块
 
