@@ -21,7 +21,7 @@
 
 [huangmingji/Stargazer.Abp.Elasticsearch: 一个基于 ABP 和 Elasticsearch 的搜索模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.Elasticsearch)
 
-## 工作流模块
+## 工作流模块  
 
-[huangmingji/Stargazer.Abp.Workflows.Elsa (github.com)](https://github.com/huangmingji/Stargazer.Abp.Workflows.Elsa)
+[huangmingji/Stargazer.Abp.Workflows.Elsa: 一个基于 ABP 和 Elsa 的工作流模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.Workflows.Elsa)
 
