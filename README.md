@@ -17,19 +17,19 @@
 
 [huangmingji/Stargazer.Abp.Captcha: 一个基于ABP的验证码模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.Captcha)
 
-## 搜索模块
+## 搜索模块（未完成）
 
 [huangmingji/Stargazer.Abp.Elasticsearch: 一个基于 ABP 和 Elasticsearch 的搜索模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.Elasticsearch)
 
-## 工作流模块
+## 工作流模块（未完成）
 
 [huangmingji/Stargazer.Abp.Workflows.Elsa: 一个基于 ABP 和 Elsa 的工作流模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.Workflows.Elsa)
 
-## 微信公众号模块
+## 微信公众号模块（未完成）
 
 [huangmingji/Stargazer.Abp.Wechat: 一个基于 ABP 的微信公众号管理模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.Wechat)
 
-## 微信小程序模块
+## 微信小程序模块（未完成）
 
 [huangmingji/Stargazer.Abp.MiniProgram: 一个基于 ABP 的微信小程序管理模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.MiniProgram)
 
