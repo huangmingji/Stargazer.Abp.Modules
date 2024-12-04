@@ -33,3 +33,5 @@
 
 [huangmingji/Stargazer.Abp.MiniProgram: 一个基于 ABP 的微信小程序管理模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.MiniProgram)
 
+## 消息模块（未完成）
+[huangmingji/Stargazer.Abp.MessageMangement: 一个基于ABP的消息管理模块 (github.com)](https://github.com/huangmingji/Stargazer.Abp.MessageMangement)
