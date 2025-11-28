@@ -18,16 +18,6 @@ jobs:
       with:
         dotnet-version: 10.0.x
     
-      - name: Cache NuGet packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.nuget/packages
-            ~/.local/share/NuGet/v3-cache
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-
       - name: Restore & Build & Test
         run: |
           dotnet restore
@@ -39,12 +29,6 @@ jobs:
         working-directory: nupkg
         run: ./pack.ps1 ${{ github.ref_name }}
         shell: pwsh
-
-      - name: Upload packages as artifact (for debugging)
-        uses: actions/upload-artifact@v4
-        with:
-          name: nupkgs
-          path: nupkg/output/*.nupkg
 
       - name: Push packages
         working-directory: nupkg
