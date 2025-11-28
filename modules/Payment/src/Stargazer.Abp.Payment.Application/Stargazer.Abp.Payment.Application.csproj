@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stargazer.Abp.Payment.Application.Contracts\Stargazer.Abp.Payment.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Stargazer.Abp.Payment.Domain\Stargazer.Abp.Payment.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Caching" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

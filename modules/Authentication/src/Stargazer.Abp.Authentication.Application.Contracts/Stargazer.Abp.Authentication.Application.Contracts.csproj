@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Authorization.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.FluentValidation" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Users\src\Stargazer.Abp.Users.Application.Contracts\Stargazer.Abp.Users.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Stargazer.Abp.Authentication.Domain.Shared\Stargazer.Abp.Authentication.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

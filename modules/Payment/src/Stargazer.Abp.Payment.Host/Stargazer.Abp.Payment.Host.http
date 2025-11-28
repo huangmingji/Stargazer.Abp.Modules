@@ -1,0 +1,6 @@
+@Stargazer.Abp.Payment.Host_HostAddress = http://localhost:5098
+
+GET {{Stargazer.Abp.Payment.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

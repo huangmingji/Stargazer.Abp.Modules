@@ -1,0 +1,6 @@
+@Stargazer.Abp.Message.Host_HostAddress = http://localhost:5210
+
+GET {{Stargazer.Abp.Message.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

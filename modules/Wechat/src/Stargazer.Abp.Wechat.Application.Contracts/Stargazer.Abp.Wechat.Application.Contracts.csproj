@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Stargazer.Abp.Wechat.Application.Contracts</PackageId>
+    <Authors>huangmingji</Authors>
+    <Company>Stargazer</Company>
+    <PackageDescription>一个基于ABP的微信公众号管理模块</PackageDescription>
+    <RepositoryUrl>https://github.com/huangmingji/Stargazer.Abp.Modules</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.FluentValidation" Version="10.0.0" />
+    <PackageReference Include="Stargazer.Abp.ObjectStorage.Application.Contracts" Version="9.1.1.1" />
+    <PackageReference Include="Senparc.Weixin" Version="6.23.0" />
+    <PackageReference Include="Senparc.Weixin.MP" Version="16.24.0" />
+    <PackageReference Include="Senparc.Weixin.WxOpen" Version="3.24.1" />
+    <PackageReference Include="Senparc.Weixin.TenPay" Version="1.18.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Wechat\" />
+    <None Remove="Wechat\Dtos\" />
+    <None Remove="Wechat\DataModels\" />
+    <None Remove="EventHandler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Wechat\" />
+    <Folder Include="Wechat\Dtos\" />
+    <Folder Include="Wechat\DataModels\" />
+    <Folder Include="EventHandler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stargazer.Abp.Wechat.Domain.Shared\Stargazer.Abp.Wechat.Domain.Shared.csproj" />
+  </ItemGroup>
+</Project>

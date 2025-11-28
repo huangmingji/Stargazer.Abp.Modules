@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stargazer.Abp.Users.Application.Contracts\Stargazer.Abp.Users.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Stargazer.Abp.Users.Domain\Stargazer.Abp.Users.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Caching" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.TextTemplating.Core" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.MailKit" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

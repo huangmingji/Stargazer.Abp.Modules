@@ -1,0 +1,14 @@
+namespace Stargazer.Abp.Users.Application.Contracts.Roles.Dtos
+{
+    public class UpdateRoleDto
+    {
+        public string Name { get; set; } = "";
+        
+        /// <summary>
+        /// 默认角色自动分配给新用户
+        /// </summary>
+        public bool IsDefault { get; set; }
+
+        public List<Guid>? PermissionIds { get; set; }
+    }
+}

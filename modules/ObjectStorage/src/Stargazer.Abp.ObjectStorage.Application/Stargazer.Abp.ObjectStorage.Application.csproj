@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stargazer.Abp.ObjectStorage.Application.Contracts\Stargazer.Abp.ObjectStorage.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.BlobStoring" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.BlobStoring.Aliyun" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.BlobStoring.FileSystem" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.BlobStoring.Minio" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Caching" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Stargazer.Abp.ObjectStorage.Application</PackageId>
+    <Authors>huangmingji</Authors>
+    <Company>Stargazer</Company>
+    <PackageDescription>一个基于ABP的对象存储模块</PackageDescription>
+    <RepositoryUrl>https://github.com/huangmingji/Stargazer.Abp.Modules</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

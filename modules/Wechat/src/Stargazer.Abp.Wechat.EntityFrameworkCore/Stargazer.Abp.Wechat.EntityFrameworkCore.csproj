@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stargazer.Abp.Wechat.Domain\Stargazer.Abp.Wechat.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.PostgreSql" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Stargazer.Abp.Wechat.EntityFrameworkCore</PackageId>
+    <Authors>huangmingji</Authors>
+    <Company>Stargazer</Company>
+    <PackageDescription>一个基于ABP的微信公众号管理模块</PackageDescription>
+    <RepositoryUrl>https://github.com/huangmingji/Stargazer.Abp.Modules</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

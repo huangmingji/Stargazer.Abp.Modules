@@ -1,0 +1,148 @@
+using Stargazer.Abp.Users.Domain.Shared.Users;
+
+namespace Stargazer.Abp.Users.Application.Contracts
+{
+
+    /// <summary>
+    /// 用户数据
+    /// </summary>
+    public class UserDataDto
+    {
+        public Guid Id { get; set; }
+
+        /// <summary>
+        /// 账号
+        /// </summary>
+        /// <value>The account.</value>
+        public string Account { get; set; } = "";
+
+        /// <summary>
+        /// 昵称
+        /// </summary>
+        /// <value>The name of the nike.</value>
+        public string NickName { get; set; } = "";
+
+        /// <summary>
+        /// 头像
+        /// </summary>
+        /// <value>The head icon.</value>
+        public string Avatar { get; set; } = "";
+
+        /// <summary>
+        /// 手机号码
+        /// </summary>
+        /// <value>The phone number.</value>
+        public string PhoneNumber { get; set; } = "";
+
+        /// <summary>
+        /// 手机号码是否已验证
+        /// </summary>
+        /// <value></value>
+        public bool PhoneNumberVerified { get; set; }
+
+        /// <summary>
+        /// 电子邮箱
+        /// </summary>
+        /// <value>The email.</value>
+        public string Email { get; set; } = "";
+
+        /// <summary>
+        /// 电子邮箱是否已验证
+        /// </summary>
+        /// <value></value>
+        public bool EmailVerified { get; set; }
+
+        /// <summary>
+        /// 允许登录时间开始
+        /// </summary>
+        public DateTime AllowStartTime { get; set; } = DateTime.UtcNow.Date.AddDays(-1);
+
+        /// <summary>
+        /// 允许登录时间结束
+        /// </summary>
+        public DateTime AllowEndTime { get; set; } = DateTime.UtcNow.Date.AddYears(100);
+
+        /// <summary>
+        /// 暂停用户开始日期
+        /// </summary>
+        public DateTime LockStartTime { get; set; } = DateTime.UtcNow.Date.AddYears(100);
+
+        /// <summary>
+        /// 暂停用户结束日期
+        /// </summary>
+        public DateTime LockEndDate { get; set; } = DateTime.UtcNow.Date.AddYears(100);
+
+        /// <summary>
+        /// 第一次访问时间
+        /// </summary>
+        public DateTime FirstVisitTime { get; set; } = DateTime.UtcNow;
+
+        /// <summary>
+        /// 上一次访问时间
+        /// </summary>
+        public DateTime PreviousVisitTime { get; set; } = DateTime.UtcNow;
+
+        /// <summary>
+        /// 最后访问时间
+        /// </summary>
+        public DateTime LastVisitTime { get; set; } = DateTime.UtcNow;
+
+        public string PersonalProfile { get; set; } = "";
+
+        public string Country { get; set; } = "";
+
+        public string Province { get; set; } = "";
+
+        public string City { get; set; } = "";
+
+        public string District { get; set; } = "";
+
+        public string Address { get; set; } = "";
+
+        public string TelephoneNumberAreaCode { get; set; } = "";
+
+        public string TelephoneNumber { get; set; } = "";
+
+        /// <summary>
+        /// 最后修改密码日期
+        /// </summary>
+        public DateTime ChangPasswordDate { get; set; } = DateTime.UtcNow;
+        
+        public List<UserRoleDto> UserRoles { get; set; } = new List<UserRoleDto>();
+
+        public List<string> Permissions => GetPermissions();
+        
+        public List<string> GetPermissions(Guid? tenantId = null)
+        {
+            var permissions = new List<string>();
+            if (tenantId == null)
+            {
+                tenantId = UserRoles.FirstOrDefault()?.TenantId;
+            }
+
+            foreach (var userRoleDto in UserRoles.FindAll(x => x.TenantId == tenantId))
+            {
+                permissions.AddRange(userRoleDto.RoleData.Permissions.ConvertAll(x => x.PermissionData.Permission));
+            }
+            return permissions;
+        }
+        
+        public void CheckAllowTime()
+        {
+            DateTime now = DateTime.UtcNow;
+            if (now < AllowStartTime || now > AllowEndTime)
+            {
+                throw new UserNotAllowLoginException(Id);
+            }
+        }
+
+        public void CheckLockTime()
+        {
+            DateTime now = DateTime.UtcNow;
+            if (now > LockStartTime && now < LockEndDate)
+            {
+                throw new UserLockLoginException(Id);
+            }
+        }
+    }
+}

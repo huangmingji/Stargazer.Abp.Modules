@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stargazer.Abp.Wechat.Application.Contracts\Stargazer.Abp.Wechat.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Stargazer.Abp.Wechat.Domain\Stargazer.Abp.Wechat.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Caching" Version="10.0.0" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="10.0.0" />
+    <PackageReference Include="Stargazer.Abp.ObjectStorage.Application" Version="9.1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Wechat\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Wechat\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Stargazer.Abp.Wechat.Application</PackageId>
+    <Authors>huangmingji</Authors>
+    <Company>Stargazer</Company>
+    <PackageDescription>一个基于ABP的微信公众号管理模块</PackageDescription>
+    <RepositoryUrl>https://github.com/huangmingji/Stargazer.Abp.Modules</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>
