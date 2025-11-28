@@ -17,11 +17,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-
+        
     # pack
     - name: Pack
       run: ./nupkg/pack.ps1 ${{ github.ref_name }}
