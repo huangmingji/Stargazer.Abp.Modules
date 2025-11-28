@@ -37,4 +37,3 @@ msbuild.err
 msbuild.wrn
 logs/
 files/
-nupkg/
