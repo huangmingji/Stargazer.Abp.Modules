@@ -12,22 +12,18 @@ jobs:
   pack:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
     
-      - name: Pack
-        working-directory: nupkg
-        run: ./pack.ps1 ${{ github.ref_name }}
-        shell: pwsh
+    - name: Pack
+      working-directory: nupkg
+      run: ./pack.ps1 ${{ github.ref_name }}
+      shell: pwsh
 
-      - name: Push packages
-        working-directory: nupkg
-        run: ./push_packages.ps1 ${{ github.ref_name }} ${{ secrets.NUGET_API_KEY }} ${{ secrets.GIT_PAT }}
-        shell: pwsh
+    - name: Push packages
+      working-directory: nupkg
+      run: ./push_packages.ps1 ${{ github.ref_name }} ${{ secrets.NUGET_API_KEY }} ${{ secrets.GIT_PAT }}
+      shell: pwsh
