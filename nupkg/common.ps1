@@ -42,8 +42,8 @@ $wechat = (
 "modules/Wechat/src/Stargazer.Abp.Wechat.HttpApi.Client"
 )
 
-$captchat = (
-"modules/Captchat/src/Stargazer.Abp.Captchat.HttpApi"
+$captcha = (
+"modules/Captcha/src/Stargazer.Abp.Captcha.HttpApi"
 )
 
-$projects = $users + $authentication + $objectStorage + $wechat + $captchat
+$projects = $users + $authentication + $objectStorage + $wechat + $captcha

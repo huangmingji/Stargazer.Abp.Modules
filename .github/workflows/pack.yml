@@ -17,11 +17,14 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10.0.x
-        
+    
+    - name: Start
+      run: cd nupkg
+
     # pack
     - name: Pack
-      run: ./nupkg/pack.ps1 ${{ github.ref_name }}
+      run: ./pack.ps1 ${{ github.ref_name }}
       
     # push
     - name: Push
-      run: ./nupkg/push_packages.ps1 ${{ github.ref_name }} ${{ secrets.NUGET_API_KEY }} ${{ secrets.GIT_PAT }}
+      run: ./push_packages.ps1 ${{ github.ref_name }} ${{ secrets.NUGET_API_KEY }} ${{ secrets.GIT_PAT }}
